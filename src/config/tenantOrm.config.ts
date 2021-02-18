@@ -11,9 +11,9 @@ const TenantOrm = {
   synchronize: false,
   migrationsRun: true,
   entities: [User],
-  migrations: [join(__dirname, '../db-tenant/migrations/**/*{.ts,.js}',)],
+  migrations: [join(__dirname, '../db-tenant/migrations/*{.ts,.js}')],
   cli: {
     migrationsDir: '/src/db-tenant/migrations'
   }
 }
-export = TenantOrm;
+module.exports = TenantOrm;
